@@ -19,7 +19,6 @@ namespace HomeAffairsDigitalIdentityProcessor
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
         }
 
         //this block of code will run once the user clicks on the Validate ID button
@@ -65,7 +64,6 @@ namespace HomeAffairsDigitalIdentityProcessor
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            pictureBox1.ImageLocation = " ";
         }
     }
 }
