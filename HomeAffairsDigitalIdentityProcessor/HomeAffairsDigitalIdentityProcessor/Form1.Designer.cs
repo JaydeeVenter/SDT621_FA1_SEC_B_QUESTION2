@@ -102,12 +102,14 @@
             // 
             // ValidateIDbtn
             // 
-            this.ValidateIDbtn.Location = new System.Drawing.Point(628, 134);
+            this.ValidateIDbtn.BackColor = System.Drawing.Color.Green;
+            this.ValidateIDbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ValidateIDbtn.Location = new System.Drawing.Point(623, 134);
             this.ValidateIDbtn.Name = "ValidateIDbtn";
-            this.ValidateIDbtn.Size = new System.Drawing.Size(75, 23);
+            this.ValidateIDbtn.Size = new System.Drawing.Size(87, 23);
             this.ValidateIDbtn.TabIndex = 7;
             this.ValidateIDbtn.Text = "Validate ID";
-            this.ValidateIDbtn.UseVisualStyleBackColor = true;
+            this.ValidateIDbtn.UseVisualStyleBackColor = false;
             this.ValidateIDbtn.Click += new System.EventHandler(this.ValidateIDbtn_Click);
             // 
             // textBox4
@@ -115,7 +117,7 @@
             this.textBox4.Location = new System.Drawing.Point(548, 225);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(240, 106);
+            this.textBox4.Size = new System.Drawing.Size(240, 121);
             this.textBox4.TabIndex = 8;
             // 
             // usrCitizenship
@@ -325,12 +327,14 @@
             // 
             // generateProfileBtn
             // 
-            this.generateProfileBtn.Location = new System.Drawing.Point(615, 337);
+            this.generateProfileBtn.BackColor = System.Drawing.Color.Green;
+            this.generateProfileBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generateProfileBtn.Location = new System.Drawing.Point(609, 352);
             this.generateProfileBtn.Name = "generateProfileBtn";
-            this.generateProfileBtn.Size = new System.Drawing.Size(100, 23);
+            this.generateProfileBtn.Size = new System.Drawing.Size(112, 23);
             this.generateProfileBtn.TabIndex = 10;
             this.generateProfileBtn.Text = "Generate Profile";
-            this.generateProfileBtn.UseVisualStyleBackColor = true;
+            this.generateProfileBtn.UseVisualStyleBackColor = false;
             this.generateProfileBtn.Click += new System.EventHandler(this.generateProfileBtn_Click);
             // 
             // ValidatedIDLbl

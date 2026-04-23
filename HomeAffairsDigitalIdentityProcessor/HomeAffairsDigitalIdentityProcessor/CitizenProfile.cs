@@ -35,6 +35,8 @@ namespace HomeAffairsDigitalIdentityProcessor
         //this will calculate the users age:
         private void CalculateUserAge()
         {
+            //this if is to handle errors if ID is empty
+            if (string.IsNullOrEmpty(IDNumber) || IDNumber.Length < 13) return;
             //this gets the year inwhich the user was born in.
             string yearFromID = IDNumber.Substring(0, 2);
             //this converts that 'string' into a int
@@ -46,8 +48,9 @@ namespace HomeAffairsDigitalIdentityProcessor
 
             //gets current year:
             int currentYear = DateTime.Now.Year;
+            int currentYearShort = currentYear % 100;
 
-            int longYOB = (shortYOBFromID <= currentYear)? 2000 + shortYOBFromID : 1900 + shortYOBFromID;
+            int longYOB = (shortYOBFromID <= currentYearShort)? 2000 + shortYOBFromID : 1900 + shortYOBFromID;
             //this hets the year in which the user was born.
             Age = currentYear - longYOB;
         }
@@ -65,7 +68,7 @@ namespace HomeAffairsDigitalIdentityProcessor
             if (Age <= 0 || Age > 110)
                 return "Invalid Age!";
             //only if all above validation methods are passed, this will print
-            return $"USer ID is valid! Citizen is {Age} years old";
+            return $"Valid ID. Citizen is {Age} years old";
         }
     }
 }

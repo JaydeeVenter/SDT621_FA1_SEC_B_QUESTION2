@@ -25,7 +25,8 @@ namespace HomeAffairsDigitalIdentityProcessor
         private void ValidateIDbtn_Click(object sender, EventArgs e)
         {
             //the code below creates a new user profile:
-            CitizenProfile userProfile = new CitizenProfile(usrName.Text, usrID.Text, usrCitizenship.Text);
+            //.Trim() is added t insure no errors happen because of spaces
+            CitizenProfile userProfile = new CitizenProfile(usrName.Text.Trim(), usrID.Text.Trim(), usrCitizenship.Text.Trim());
 
             //this displays the result in the label:
             ValidatedIDLbl.Text = userProfile.ValidateID();
@@ -40,6 +41,7 @@ namespace HomeAffairsDigitalIdentityProcessor
             string userProfileSummary = $"==== DIGITAL CITIZEN SUMMARY ====\r\n" +
                                         $"Name: {userProfile.FullName}\r\n" +
                                         $"ID Number: {userProfile.IDNumber}\r\n" +
+                                        $"Age: {userProfile.Age}\r\n" +
                                         $"Citizenship: {userProfile.CitizenshipStatus}\r\n" +
                                         $"Validation: {userProfile.ValidateID()}\r\n" +
                                         "Processed at: Home Affairs Service Desk\r\n" +
